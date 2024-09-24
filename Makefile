@@ -13,6 +13,12 @@ py-server:
 py-client:
 	@python src/client.py
 
+start-client:
+	@docker compose exec -it app-dado bash -c "make py-client"
+
+start-server:
+	@docker compose exec -it app-dado bash -c "make py-server"
+
 ## DOCKER
 
 ps:
